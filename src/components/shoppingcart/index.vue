@@ -115,7 +115,6 @@
             href: '/detail/1006'
           }
         ],
-
         shopCarList: {}
       }
     },
@@ -149,7 +148,7 @@
         this.shopCar.minus(target)
       },
       deleteShop(target){
-        this.shopCar.remove(target.id)
+        this.shopCar.remove(target.id);
         this.shopCarList = this.shopCar.getAll()
       }
     }

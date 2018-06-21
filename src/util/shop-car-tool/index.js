@@ -1,5 +1,5 @@
 /**
- * Created by HP on 2018/1/21.
+ * Created by liuyang on 2018/6/18.
  */
 
 import VueDB from '../../util/vue-db/vue-db-long'
@@ -77,7 +77,7 @@ class ShopCarTool{
   // 删除整个商品
   remove(key) {
     this.shopCarDB[key].length = 0
-    
+
     delete this.shopCarDB[key]
     this.upData()
   }

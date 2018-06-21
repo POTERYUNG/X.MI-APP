@@ -1,5 +1,5 @@
 /**
- * Created by HP on 2018/1/21.
+ * Created by liuyang on 2018/6/18.
  */
 class VueDB{
   constructor () {

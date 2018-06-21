@@ -1,13 +1,13 @@
 /**
- * Created by HP on 2018/1/7.
+ * Created by liuyang on 2018/6/18.
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
 import ShopCarTool from '../util/shop-car-tool'
 
-let shopCar = new ShopCarTool()
+let shopCar = new ShopCarTool();
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 
 const AppLoading = { // 路由状态
@@ -24,7 +24,7 @@ const AppLoading = { // 路由状态
       return state.nowStatus
     }
   }
-}
+};
 
 
 const ShopCar = { // 购物车
@@ -41,11 +41,28 @@ const ShopCar = { // 购物车
       return state.length
     }
   }
-}
+};
+
+const Login = { // 登录状态
+  state: {
+    logined: false
+  },
+  mutations: {
+    setLoginStatus (state, logined) {
+      state.logined = logined
+    }
+  },
+  getters: {
+    getLoginStatus: state => {
+      return state.logined
+    }
+  }
+};
 
 export default new Vuex.Store({
   modules: {
     AppLoading,
-    ShopCar
+    ShopCar,
+    Login
   }
 })

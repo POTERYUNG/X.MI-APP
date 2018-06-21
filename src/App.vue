@@ -8,6 +8,7 @@
         <router-view></router-view>
       </transition>
     </div>
+
     <footer class="footer clear" :class="{ 'leave': leaveComp }">
       <div class="footer-item" :class="{ 'active': isActive('home') }" @click="open('/home')">
         <p class="icon">
@@ -21,6 +22,13 @@
           <span class="iconfont icon-fenlei"></span>
         </p>
         <p class="name">分类</p>
+      </div>
+
+      <div class="footer-item" :class="{ 'active': isActive('discover') }" @click="open('/discover')">
+        <p class="icon">
+          <span class="iconfont icon-xiaomi"></span>
+        </p>
+        <p class="name">发现</p>
       </div>
 
       <div class="footer-item shop-car" :class="{ 'active': isActive('shoppingcart') }" @click="open('/shoppingcart')">
@@ -38,7 +46,6 @@
         <p class="name">我的</p>
       </div>
     </footer>
-
   </div>
 </template>
 
@@ -47,7 +54,6 @@
   import { mapGetters } from 'vuex'
 
   new Rem();
-
   export default {
     name: 'app',
     data () {
@@ -67,7 +73,6 @@
         } else {
           this.transitionName = 'slide-go'
         }
-
         this.nowUrl = to.fullPath
       }
     },
@@ -77,11 +82,9 @@
         'getShopCarLength'
       ]),
       leaveComp() {
-        var resout = true;
-        var base = ['home', 'classification', 'shoppingcart', 'mine'];
-
-
-        for(var i=0; i<base.length; i++){
+        let resout = true;
+        let base = ['home', 'classification', 'discover', 'shoppingcart', 'mine'];
+        for(let i=0; i<base.length; i++){
           if(this.isActive(base[i])){
             resout = false;
           }
@@ -97,16 +100,13 @@
         this.$router.openPage(link)
       },
       isActive(name) {
-        return this.nowUrl.indexOf(name) != -1
+        return this.nowUrl.indexOf(name) !== -1;
       }
     }
   }
 </script>
 
-
-
 <style lang="sass" type="text/sass">
   @import "./assets/sass/public"
-  @import './assets/font/iconfont.css'
-
+  @import './assets/sass/font/iconfont.css'
 </style>

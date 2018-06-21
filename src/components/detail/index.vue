@@ -136,9 +136,9 @@
       },
       addShopCar() {
 
-        var root = this
+        var root = this;
         var width = document.documentElement.clientWidth || document.body.clientWidth
-        root.$refs.bool.style.display = 'block'
+        root.$refs.bool.style.display = 'block';
 
         var parabola = new Parabola({
           startPos: {
@@ -157,7 +157,7 @@
             root.$refs.bool.style.transform = position
           },
           onFinish (pos) {
-            root.$refs.bool.style.display = 'none'
+            root.$refs.bool.style.display = 'none';
             root.shopCar.add( root.info )
           }
         });
