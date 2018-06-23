@@ -23,21 +23,19 @@
 
       <img src="http://i8.mifile.cn/b2c-mimall-media/60c89ea361bed3a7edaf73b3b6663608.jpg?bg=BBD6DF" @click="$router.openPage('/detail/1009')" alt="">
 
-
-
       <ul class="hot-box">
+        <li class="item">小米8</li>
         <li class="item">小米耳机</li>
+        <li class="item">净水器厨下</li>
         <li class="item">小米音箱</li>
-        <li class="item">电视机</li>
-        <li class="item">红米</li>
-        <li class="item">24寸</li>
-        <li class="item">年轻人的第一张简历</li>
-        <li class="item">雷军</li>
-        <li class="item">Are you ok?</li>
+        <li class="item">小米电视机4A</li>
+        <li class="item">小米笔记本Pro i5</li>
+        <li class="item">净水器PP棉滤芯两件套装</li>
+        <li class="item">小米MIX 2S</li>
+        <li class="item">小米家庭影院</li>
+        <li class="item">多功能转接器</li>
       </ul>
     </div>
-
-
   </div>
 </template>
 
@@ -55,12 +53,11 @@
     },
     methods: {
       submit(){
-
+        this.getResoutItem()
       }
     },
     mounted() {
       // 默认请求一遍
-      // 由于为本地json 不对错误进行处理
       axios.get('./static/server/lib.json')
         .then(response=> {
           this.resout = response.data.resout;
