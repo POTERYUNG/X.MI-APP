@@ -1,0 +1,33 @@
+{
+  "id": 1021,
+  "banner": [
+    {
+      "src": "src/assets/img/mini01.jpg"
+    },
+    {
+      "src": "src/assets/img/mini02.jpg"
+    },
+    {
+      "src": "src/assets/img/mini03.jpg"
+    }
+  ],
+  "hot": "src/assets/img/minizensong.jpg",
+  "hotLink": "/detail/1021",
+  "title": "小米小爱音响mini",
+  "bigContent": "",
+  "smallContent": "一句话，操控家中电器 /3500万海量音乐与优质有声读物 / 查讯息、语音备忘、日程管理，生活小助手",
+  "money": 149,
+  "noMoney": "169",
+  "tips": ["直降200元"],
+  "chouse": "小米小爱音响mini 白色 x1",
+  "address": ["请选择配送地址"],
+  "pBox": [
+    "src/assets/img/miniD01.jpg",
+    "src/assets/img/miniD02.jpg",
+    "src/assets/img/miniD03.jpg",
+    "src/assets/img/miniD04.jpg"
+  ],
+
+  "msg": "请求成功",
+  "code": 200
+}

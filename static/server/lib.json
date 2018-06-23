@@ -94,6 +94,16 @@
       "name": "小米5S",
       "id": 1019,
       "link": "/detail/1019"
+    },
+    {
+      "name": "小米6X",
+      "id": 1020,
+      "link": "/detail/1020"
+    },
+    {
+      "name": "小米小爱音响mini",
+      "id": 1021,
+      "link": "/detail/1021"
     }
   ],
   "msg": "请求成功",

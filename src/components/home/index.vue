@@ -29,28 +29,30 @@
     <div ref="view01" class="app-init scroll-box tab-box mi-tj footer-hack" v-show="navListActiveIndex == 0">
       <swiper :list="bannerList"></swiper>
       <div class="nav-mi-tj clear">
-        <a href="javascript:;" class="fl">
-          <img @click="$router.openPage('/pay')" src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022292984819.png" alt="">
+        <a href="javascript:" class="fl">
+          <img src="../../assets/img/showInfo.jpg" alt="">
         </a>
-        <a href="javascript:;" class="fl">
-          <img @click="$router.openPage('/pay')" src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022292372054.png" alt="">
+      </div>
+      <div class="nav-mi-tj clear">
+        <a href="javascript:" class="fl">
+          <img src="../../assets/img/cityzaobao.jpg" alt="">
         </a>
-        <a href="javascript:;" class="fl">
-          <img @click="$router.openPage('/pay')" src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022291629252.png" alt="">
-        </a>
-        <a href="javascript:;" class="fl">
-          <img @click="$router.openPage('/pay')" src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022290460400.png" alt="">
-        </a>
+      </div>
+
+      <div class="shop-item clear">
+        <img @click="$router.openPage('/detail/1003')" src="../../assets/img/mi2S.jpg" class="fl href" alt="">
+        <img @click="$router.openPage('/detail/1021')" src="../../assets/img/mini.jpg" class="fr href" style="margin-bottom: 0.05rem" alt="">
+        <img @click="$router.openPage('/detail/1004')" src="../../assets/img/midianshi.jpg" class="fr href" alt="">
+      </div>
+
+      <div class="shop-item clear">
+        <img @click="$router.openPage('/detail/1003')"  v-lazy="'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/a589d24e74c4d96191dd46635054e804.jpg'" alt="">
       </div>
 
       <div class="shop-item clear">
         <img @click="$router.openPage('/detail/1001')" src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011114551289342.png" class="fl href" alt="">
         <img @click="$router.openPage('/detail/1004')" src="//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e2ad0dbf777fda097e55cea9ce716e33.jpg?thumb=1&w=358&h=252" class="fr href" style="margin-bottom: 0.05rem" alt="">
         <img @click="$router.openPage('/detail/1005')" src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011114550596671.png" class="fr href" alt="">
-      </div>
-
-      <div class="shop-item clear">
-        <img @click="$router.openPage('/detail/1003')"  v-lazy="'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/a589d24e74c4d96191dd46635054e804.jpg'" alt="">
       </div>
 
       <div class="shop-item clear">
@@ -97,6 +99,11 @@
 
     <div ref="view03" class="app-init scroll-box tab-box footer-hack" v-show="navListActiveIndex == 2">
       <swiper :list="bannerList02"></swiper>
+      <div class="nav-mi-tj clear">
+        <a href="javascript:" class="fl">
+          <img src="../../assets/img/zhinengtuijian.jpg" alt="">
+        </a>
+      </div>
       <div class="shop-item">
         <img src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316464243450.png" alt="">
         <div class="shop-box clear">
@@ -131,6 +138,11 @@
 
     <div ref="view05" class="app-init scroll-box tab-box footer-hack" v-show="navListActiveIndex == 4">
       <swiper :list="bannerList04"></swiper>
+      <div class="nav-mi-tj clear">
+        <a href="javascript:" class="fl">
+          <img src="../../assets/img/diannaotuijian.jpg" alt="">
+        </a>
+      </div>
       <div class="shop-item">
         <img src="http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316464243450.png" alt="">
         <div class="shop-box clear">
@@ -147,6 +159,7 @@
     </div>
 
     <div ref="view06" class="app-init scroll-box tab-box footer-hack" v-show="navListActiveIndex == 5">
+      <img src="../../assets/img/quanmianping.jpg" alt="" @click="$router.openPage('/detail/1020')">
       <img v-lazy="'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317010732422.png'" @click="$router.openPage('/detail/1003')" alt="">
       <img v-lazy="'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/48ca6cfb19c45e7cbecbd8c34c757445.jpg'" alt="">
       <img v-lazy="'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317012799998.png'" alt="">
@@ -204,12 +217,16 @@
   import swiper from '../../components/swiper'
   import VueDB from '../../util/vue-db/vue-db'
 
-  let DB = new VueDB()
+  let DB = new VueDB();
 
   export default {
     data() {
       return {
         bannerList : [
+          {
+            src: 'src/assets/img/banner001.jpg',
+            href: '/detail/1020'
+          },
           {
             src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/01.png',
             href: '/detail/1001'
@@ -229,11 +246,11 @@
         ],
         shoplist : [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/miniYX.jpg',
+            title: '小米小爱音响mini',
+            con: '能听会说的人工智能音响',
+            money: 299,
+            href: '/detail/1021'
           },
           {
             src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
@@ -243,60 +260,46 @@
             href: '/detail/1008'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/miAIYX.jpg',
+            title: '小米AI音响',
+            con: '听音乐、语音遥控家电的人',
+            money: 299,
+            href: '/detail/1021'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/midianshi2.jpg',
+            title: '小米电视4A 40英寸',
+            con: 'FHD全高清屏，四核处理器',
+            money: 1399,
+            href: '/detail/1004'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/mihuabanche.jpg',
+            title: '小米米家电动滑板车',
+            con: '便携折叠，自由穿行',
+            money: 1999,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/miluyou.jpg',
+            title: '小米路由器3G',
+            con: '双核双千兆，上网很快',
+            money: 249,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/mipopulele.jpg',
+            title: 'Populele U1智能优客',
+            con: '练琴不枯燥，个性且精致',
+            money: 1999,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
-            title: '米家感应灯',
-            con: '举步之明，光明立现',
-            money: 49,
-            href: '/detail/1008'
+            src: 'src/assets/img/miAIYX.jpg',
+            title: '小米AI音响',
+            con: '听音乐、语音遥控家电的人',
+            money: 299,
+            href: '/detail/1021'
           }
         ],
         navList: [
@@ -332,6 +335,10 @@
 
         bannerList01 : [
           {
+            src: 'src/assets/img/banner001.jpg',
+            href: '/detail/1020'
+          },
+          {
             src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/1888a9f0a6ae807113cb428b9e01f5fe.jpg',
             href: '/detail/1007'
           },
@@ -342,11 +349,18 @@
         ],
         shoplist01: [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
+            src: 'src/assets/img/mi6X2.jpg',
+            title: '小米6X 4GB+32GB',
+            con: '前后2000万，拍人更美',
+            money: 1399,
+            href: '/detail/1020'
+          },
+          {
+            src: 'src/assets/img/miA6.jpg',
+            title: '红米A6',
+            con: 'AI人脸解锁，小巧屏高性能',
+            money: 599,
+            href: '/detail/1020'
           },
           {
             src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
@@ -356,61 +370,26 @@
             href: '/detail/1010'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
+            src: 'src/assets/img/miMAX2.jpg',
+            title: '小米Max2 32GB',
+            con: '6.44大屏，5300mAh大电量',
+            money: 1099,
+            href: '/detail/1003'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
+            src: 'src/assets/img/hminote5.jpg',
+            title: '红米Note5 3GB+32GB',
+            con: '1.4um大像素 AI双社',
+            money: 999,
+            href: '/detail/1020'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
+            src: 'src/assets/img/hminote502.jpg',
+            title: '红米Note5 4GB+64GB',
+            con: '1.4um大像素 AI双社',
+            money: 1399,
+            href: '/detail/1003'
           },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011213403719963.png',
-            title: '红米Note 4X 32GB',
-            con: '多彩金属 / 超长续航',
-            money: 899,
-            href: '/detail/1010'
-          }
         ],
 
         bannerList02 : [
@@ -421,11 +400,11 @@
         ],
         shoplist02: [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/93cc1fa15e0e9af87e37cba047d8186e.jpg',
-            title: '米家四位四控插线板',
-            con: '四位分控，随用随开',
-            money: 89,
-            href: '/detail/1012'
+            src: 'src/assets/img/miniYX.jpg',
+            title: '小米小爱音响mini',
+            con: '能听会说的人工智能音响',
+            money: 299,
+            href: '/detail/1021'
           },
           {
             src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/93cc1fa15e0e9af87e37cba047d8186e.jpg',
@@ -435,18 +414,32 @@
             href: '/detail/1012'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/93cc1fa15e0e9af87e37cba047d8186e.jpg',
-            title: '米家四位四控插线板',
-            con: '四位分控，随用随开',
-            money: 89,
-            href: '/detail/1012'
+            src: 'src/assets/img/miluyou.jpg',
+            title: '小米路由器3G',
+            con: '双核双千兆，上网很快',
+            money: 249,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/93cc1fa15e0e9af87e37cba047d8186e.jpg',
-            title: '米家四位四控插线板',
-            con: '四位分控，随用随开',
-            money: 89,
-            href: '/detail/1012'
+            src: 'src/assets/img/mipopulele.jpg',
+            title: 'Populele U1智能优客',
+            con: '练琴不枯燥，个性且精致',
+            money: 1999,
+            href: '/detail/1023'
+          },
+          {
+            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
+            title: '米家感应灯',
+            con: '举步之明，光明立现',
+            money: 49,
+            href: '/detail/1008'
+          },
+          {
+            src: 'src/assets/img/miAIYX.jpg',
+            title: '小米AI音响',
+            con: '听音乐、语音遥控家电的人',
+            money: 299,
+            href: '/detail/1021'
           }
         ],
 
@@ -458,11 +451,18 @@
         ],
         shoplist03: [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316504878837.png',
-            title: '小米电视4A 43英寸',
-            con: '全高清 HDR，64位处理器',
-            money: 1999,
+            src: 'src/assets/img/dianshi1.jpg',
+            title: '43英寸电视4A青春版',
+            con: '全高清屏，人工智能语音',
+            money: 1499,
             href: '/detail/1004'
+          },
+          {
+            src: 'src/assets/img/dianshi2.jpg',
+            title: '小米电视4A 32英寸',
+            con: '64位处理器，高清智能电视',
+            money: 849,
+            href: '/detail/1013'
           },
           {
             src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316504878837.png',
@@ -472,31 +472,10 @@
             href: '/detail/1004'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316504878837.png',
-            title: '小米电视4A 43英寸',
-            con: '全高清 HDR，64位处理器',
-            money: 1999,
-            href: '/detail/1004'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316504878837.png',
-            title: '小米电视4A 43英寸',
-            con: '全高清 HDR，64位处理器',
-            money: 1999,
-            href: '/detail/1004'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316504878837.png',
-            title: '小米电视4A 43英寸',
-            con: '全高清 HDR，64位处理器',
-            money: 1999,
-            href: '/detail/1004'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011316504878837.png',
-            title: '小米电视4A 43英寸',
-            con: '全高清 HDR，64位处理器',
-            money: 1999,
+            src: 'src/assets/img/dianshi3.jpg',
+            title: '55英寸电视4S曲面',
+            con: '4K曲面屏，金属机身',
+            money: 2999,
             href: '/detail/1004'
           }
         ],
@@ -509,10 +488,24 @@
         ],
         shoplist04: [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
+            src: 'src/assets/img/diannao01.jpg',
+            title: '13.3"笔记本i7 独显',
+            con: '轻薄全金属，超长续航',
+            money: 5499,
+            href: '/detail/1014'
+          },
+          {
+            src: 'src/assets/img/diannao02.jpg',
             title: '13.3"笔记本i5 独显',
             con: '指纹解锁，全金属机身',
-            money: 5199,
+            money: 4999,
+            href: '/detail/1014'
+          },
+          {
+            src: 'src/assets/img/diannao03.jpg',
+            title: '小米游戏鼠标',
+            con: '掌中游戏利器，为真玩家而生',
+            money: 249,
             href: '/detail/1014'
           },
           {
@@ -522,34 +515,7 @@
             money: 5199,
             href: '/detail/1014'
           },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1014'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1014'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1014'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1014'
-          }
+
         ],
 
         bannerList06: [
@@ -560,46 +526,32 @@
         ],
         shoplist06: [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317083193859.png',
+            src: 'src/assets/img/xiangjiaozhen.png',
             title: '8H护颈乳胶枕 Z2',
             con: '多重新科技  升级好睡眠',
             money: 239,
             href: '/detail/1016'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317083193859.png',
-            title: '8H护颈乳胶枕 Z2',
-            con: '多重新科技  升级好睡眠',
-            money: 239,
-            href: '/detail/1016'
+            src: 'src/assets/img/miniYX.jpg',
+            title: '小米小爱音响mini',
+            con: '能听会说的人工智能音响',
+            money: 299,
+            href: '/detail/1021'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317083193859.png',
-            title: '8H护颈乳胶枕 Z2',
-            con: '多重新科技  升级好睡眠',
-            money: 239,
-            href: '/detail/1016'
+            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/65eeeedca463345b0cfd36e042185af3.jpg',
+            title: '米家感应灯',
+            con: '举步之明，光明立现',
+            money: 49,
+            href: '/detail/1008'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317083193859.png',
-            title: '8H护颈乳胶枕 Z2',
-            con: '多重新科技  升级好睡眠',
-            money: 239,
-            href: '/detail/1016'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317083193859.png',
-            title: '8H护颈乳胶枕 Z2',
-            con: '多重新科技  升级好睡眠',
-            money: 239,
-            href: '/detail/1016'
-          },
-          {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317083193859.png',
-            title: '8H护颈乳胶枕 Z2',
-            con: '多重新科技  升级好睡眠',
-            money: 239,
-            href: '/detail/1015'
+            src: 'src/assets/img/miAIYX.jpg',
+            title: '小米AI音响',
+            con: '听音乐、语音遥控家电的人',
+            money: 299,
+            href: '/detail/1021'
           }
         ],
 
@@ -611,32 +563,32 @@
         ],
         shoplist07: [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317120865819.png',
+            src: 'src/assets/img/midianshika.png',
             title: '小米影视会员卡',
             con: '畅享海量片库',
             money: 498,
             href: '/detail/1018'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317120865819.png',
-            title: '小米影视会员卡',
-            con: '畅享海量片库',
-            money: 498,
-            href: '/detail/1018'
+            src: 'src/assets/img/miniYX.jpg',
+            title: '小米小爱音响mini',
+            con: '能听会说的人工智能音响',
+            money: 299,
+            href: '/detail/1021'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317120865819.png',
-            title: '小米影视会员卡',
-            con: '畅享海量片库',
-            money: 498,
-            href: '/detail/1018'
+            src: 'src/assets/img/mipopulele.jpg',
+            title: 'Populele U1智能优客',
+            con: '练琴不枯燥，个性且精致',
+            money: 1999,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011317120865819.png',
-            title: '小米影视会员卡',
-            con: '畅享海量片库',
-            money: 498,
-            href: '/detail/1018'
+            src: 'src/assets/img/miAIYX.jpg',
+            title: '小米AI音响',
+            con: '听音乐、语音遥控家电的人',
+            money: 299,
+            href: '/detail/1021'
           }
         ]
       }
@@ -687,7 +639,7 @@
     top: 2.5rem
   .home-index .tab-box.mi-tj .nav-mi-tj a
       display: block
-      width:  25%
+      width:  100%
   .home-index .shop-box
     background-color: #fff
 

@@ -18,7 +18,7 @@
             <div class="_order">
               <p class="left">
                 <i class="iconfont icon-qijiandian"></i>
-                vivo官方旗舰店
+                小米官方旗舰店
               </p>
               <p class="right">已完成</p>
             </div>

@@ -1,0 +1,35 @@
+{
+  "id": 1020,
+  "banner": [
+    {
+      "src": "src/assets/img/mi6X01.jpg"
+    },
+    {
+      "src": "src/assets/img/mi6X02.jpg"
+    },
+    {
+      "src": "src/assets/img/mi6X03.jpg"
+    }
+  ],
+  "hot": "",
+  "hotLink": "/detail/1020",
+  "title": "小米6X",
+  "bigContent": " 【4GB+64GB赠价值59元蓝牙耳机】",
+  "smallContent": "前置2000万“治愈系”自拍 /后置2000万 AI双设 / “杨柳腰”纤薄机身 / 标配骁龙660 AIE处理器。",
+  "money": 1599,
+  "noMoney": "",
+  "tips": [],
+  "chouse": "小米6X 4GB+64GB 櫂石黑 x1",
+  "address": ["湖南", "长沙"],
+  "pBox": [
+    "src/assets/img/mi6xD01.jpg",
+    "src/assets/img/mi6xD02.jpg",
+    "src/assets/img/mi6xD03.jpg",
+    "src/assets/img/mi6xD04.jpg",
+    "src/assets/img/mi6xD05.jpg",
+    "src/assets/img/mi6xD06.jpg"
+  ],
+
+  "msg": "请求成功",
+  "code": 200
+}

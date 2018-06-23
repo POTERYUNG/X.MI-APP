@@ -13,25 +13,25 @@
     </div>
 
     <div class="tab-box clear">
-      <div class="item" @click="$router.openPage('/pay')">
+      <div class="item" @click="$router.openPage('/order')">
         <p class="icon">
           <span class="iconfont icon-qianbao"></span>
         </p>
         <p class="name">待付款</p>
       </div>
-      <div class="item" @click="$router.openPage('/pay')">
+      <div class="item" @click="$router.openPage('/order')">
         <p class="icon">
           <span class="iconfont icon-daishouhuo"></span>
         </p>
         <p class="name">待收货</p>
       </div>
-      <div class="item" @click="$router.openPage('/pay')">
+      <div class="item" @click="$router.openPage('/order')">
         <p class="icon">
           <span class="iconfont icon-daipingjia"></span>
         </p>
         <p class="name">待评价</p>
       </div>
-      <div class="item" @click="$router.openPage('/pay')">
+      <div class="item" @click="$router.openPage('/order')">
         <p class="icon">
           <span class="iconfont icon-buoumaotubiao46"></span>
         </p>

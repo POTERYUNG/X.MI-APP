@@ -28,7 +28,7 @@
         <p class="icon">
           <span class="iconfont icon-xiaomi"></span>
         </p>
-        <p class="name">发现</p>
+        <p class="name">动态</p>
       </div>
 
       <div class="footer-item shop-car" :class="{ 'active': isActive('shoppingcart') }" @click="open('/shoppingcart')">

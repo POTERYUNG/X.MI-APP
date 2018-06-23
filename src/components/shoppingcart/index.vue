@@ -55,7 +55,7 @@
         <p> <span class="mm">{{ getAllMoney }}</span> 元 </p>
       </div>
       <div class="item continue" @click="$router.openPage('/')">继续购物</div>
-      <div class="item pay" @click="$router.openPage('/pay')">去结算</div>
+      <div class="item pay">去结算</div>
     </div>
   </div>
 </template>
@@ -73,46 +73,53 @@
       return {
         shoplist : [
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
+            src: 'src/assets/img/diannao01.jpg',
             title: '13.3"笔记本i5 独显',
             con: '指纹解锁，全金属机身',
             money: 5199,
             href: '/detail/1006'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1006'
+            src: 'src/assets/img/miniYX.jpg',
+            title: '小米小爱音响mini',
+            con: '能听会说的人工智能音响',
+            money: 299,
+            href: '/detail/1021'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1006'
+            src: 'src/assets/img/midianshi2.jpg',
+            title: '小米电视4A 40英寸',
+            con: 'FHD全高清屏，四核处理器',
+            money: 1399,
+            href: '/detail/1004'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1006'
+            src: 'src/assets/img/mihuabanche.jpg',
+            title: '小米米家电动滑板车',
+            con: '便携折叠，自由穿行',
+            money: 1999,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1006'
+            src: 'src/assets/img/miluyou.jpg',
+            title: '小米路由器3G',
+            con: '双核双千兆，上网很快',
+            money: 249,
+            href: '/detail/1023'
           },
           {
-            src: 'http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/cf0b9ede4dbbc115f3d2d1b032e97d21.jpg',
-            title: '13.3"笔记本i5 独显',
-            con: '指纹解锁，全金属机身',
-            money: 5199,
-            href: '/detail/1006'
+            src: 'src/assets/img/mipopulele.jpg',
+            title: 'Populele U1智能优客',
+            con: '练琴不枯燥，个性且精致',
+            money: 1999,
+            href: '/detail/1023'
+          },
+          {
+            src: 'src/assets/img/miAIYX.jpg',
+            title: '小米AI音响',
+            con: '听音乐、语音遥控家电的人',
+            money: 299,
+            href: '/detail/1021'
           }
         ],
         shopCarList: {}
